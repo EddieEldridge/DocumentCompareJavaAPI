@@ -23,14 +23,7 @@ public class Compare
 	
 	// Pass our two files into a function
 	// They will be both run in two seperate threads
-	private static void threads(File file1, File file2) {
-		
-		Thread t1 = new Thread();
-		t1.start();
-		
-		Thread t2 = new Thread();
-		t2.start();
-	} // threads
+	
 	
 	public static void byteSize(String file1String, String file2String){
 		
@@ -96,7 +89,7 @@ public class Compare
 	    	
 	    }while(exit!=false); 
 	    
-	    threads(file1, file2);
+	    Threader.threads(file1, file2);
 	}
 }
 	
