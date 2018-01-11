@@ -17,7 +17,7 @@ public class Shingle {
 		}
 		
 		public void setFileID(int fileID) {
-			this.fileID = fileID;
-		}
+		this.fileID = fileID;
+	}
 
 }
