@@ -1,4 +1,4 @@
-# Document_Similarity_Measurement
+# Document Comparison Tool
 Compares the similiarity of text files
 ***
 ## How to use
