@@ -1,5 +1,6 @@
 package ie.gmit.sw;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.concurrent.BlockingQueue;
@@ -60,7 +61,18 @@ public class Menu {
 		} else if (response == 'N' || response == 'n') {
 			FileParser.parseFile(file1String, file2String);
 		}
-
+		
+		// Doesnt work
+		//private static void threader(File file1, File file2) {
+			
+			//Thread t1 = new Thread(file1);
+			//t1.start();
+			
+			//Thread t2 = new Thread(file2);
+			//t2.start();
+		//} // createThreads
+	
 	}
+	
 
 }
