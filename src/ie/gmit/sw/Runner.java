@@ -10,7 +10,7 @@ import java.util.*;
 
 public class Runner {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// Call our menu function
 		Menu.prompt();
 	}
