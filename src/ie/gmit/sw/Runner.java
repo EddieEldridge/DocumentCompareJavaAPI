@@ -13,15 +13,10 @@ public class Runner {
 	 public static void main(String[] args)
 	 {
 		 	
-		 	// Header
-	        System.out.println("========================");
-	        System.out.println("Document Comparison API");
-	        System.out.println("========================");
-	        
+		 	
 	        // Call our compareDocs function
-	        Compare.compareDocs();
-	       
-	        
+		 	Menu.prompt();
+	              
 	   }
 	 
 }

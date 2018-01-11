@@ -9,30 +9,16 @@ import java.util.Scanner;
 public class Compare 
 {
 	  
-	public static void compareDocs()
+	public static void compareDocs(String file1String, String file2String)
 	{
 		// Import scanner/bufferereader to read our file names from user
 		FileInputStream fileInputStream = null;
-		Scanner scanner = new Scanner(System.in);
 		BufferedReader bufferedReader = null;
 		      	
 	    // Local variables
 		int shingleSize;
 		boolean exit = false;
-	    String file1String;
-	    String file2String;
 	    
-	    // Prompt user to enter shingle size
-	    System.out.println("Please enter the size of of the shingle: ");
-	    shingleSize = scanner.nextInt();
-	    
-		// Prompt user to enter the filenames
-		System.out.println("Please enter the filename of file 1 (.txt): ");
-		file1String = ("resources/" + scanner.next() +".txt");
-
-		System.out.println("Please enter the filename of file 2: ");
-		file2String = ("resources/" + scanner.next() +".txt");
-		
 		 // File variables
 		File file1 = new File(file1String);
 		File file2 = new File(file2String);
@@ -61,6 +47,7 @@ public class Compare
 
 			} catch (IOException e) {
 				e.printStackTrace();
+				System.out.println("The file could not be read correctly.");
 			}
 	    	
 	    	// File 2
@@ -84,9 +71,11 @@ public class Compare
 
 			} catch (IOException e) {
 				e.printStackTrace();
+				System.out.println("The file could not be read correctly.");
 			}
 	    	
 	    }while(exit!=false); 
+	    
 	}// compareDocs
 	
 	private static void threads(File file1, File file2) {
@@ -96,7 +85,7 @@ public class Compare
 		
 		Thread t2 = new Thread((Runnable) file2);
 		t2.start();
-	} // createThreads
+	} // threads
 	
 }
 	
