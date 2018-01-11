@@ -19,6 +19,7 @@ public class Menu {
 		boolean exit = false;
 	    String file1String;
 	    String file2String;
+	    char response;
 	    
 	    // Prompt user to enter shingle size
 	    System.out.println("Please enter the size of of the shingle: ");
@@ -31,7 +32,18 @@ public class Menu {
 		System.out.println("Please enter the filename of file 2: ");
 		file2String = ("resources/" + scanner.next() +".txt");
 		
-        Compare.compareDocs(file1String, file2String);
+		System.out.println("Would you like to verify the contents the files? (Y/N)");
+		response = scanner.next().charAt(0);
+		
+		if(response=='Y' || response=='y')
+		{
+			Compare.byteSize(file1String, file2String);
+		}
+		else if(response=='N' || response=='n')
+		{
+	        Compare.compareDocs(file1String, file2String);
+		}
+	
 
 	}
 	  

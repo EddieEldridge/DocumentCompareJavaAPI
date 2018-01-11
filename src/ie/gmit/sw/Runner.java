@@ -9,14 +9,10 @@ import java.io.IOException;
 import java.util.*;
 
 public class Runner {
-	
-	 public static void main(String[] args)
-	 {
-		 	
-		 	
-	        // Call our compareDocs function
-		 	Menu.prompt();
-	              
-	   }
-	 
+
+	public static void main(String[] args) {
+		// Call our menu function
+		Menu.prompt();
+	}
+
 }
