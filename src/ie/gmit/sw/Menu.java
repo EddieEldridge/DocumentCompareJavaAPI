@@ -40,8 +40,8 @@ public class Menu {
 		response = scanner.next().charAt(0);
 		
 		// Pass the paths of our files to our FileParser class
-		FileParser fileID1 = new FileParser(file1String);
-		FileParser fileID2 = new FileParser(file2String);
+		//FileParser fileID1 = new FileParser(file1String);
+		//FileParser fileID2 = new FileParser(file2String);
 
 		// Create a blocking queue to store our shingles in
 		BlockingQueue<Shingle> shingleQueue = new LinkedBlockingDeque<>();
@@ -54,8 +54,7 @@ public class Menu {
 		}
 		else if(response=='N' || response=='n')
 		{	
-			
-	        FileParser.FileParser(file1String, file2String);
+	        FileParser.parseFile(file1String, file2String);
 		}
 	
 

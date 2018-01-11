@@ -9,9 +9,6 @@ import java.io.InputStreamReader;
 public class FileParser {
 	
 	// Path to file
-	private String filePath;
-	private String fileContents;
-	private String[] words;
 	
 	public static void byteSize(String file1String, String file2String)
 	{
@@ -83,10 +80,13 @@ public class FileParser {
 	}
 
 	
-	public FileParser(String file1String, String file2String) throws IOException
+	public static void parseFile(String file1String, String file2String) throws IOException
 	{	
+			
+			String fileContents;
+
 		   // Reader to read in our file
-	       BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath)));
+	       BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file1String)));
 	       
 	       // String builder to store contents of file in a string
 	       StringBuilder stringBuilder = new StringBuilder();
@@ -101,12 +101,16 @@ public class FileParser {
 	    	   stringBuilder.append(perLine);
 	       }
 	       fileContents = stringBuilder.toString();
+		   //System.out.println(fileContents);
 	}
 	
-	public String[] getWords() 
-	{
+	public static String[] getWords(String fileContents) 
+	{	
+		String[] words;
+
 		// Split the words using the characters in our regExp below
 		return words = fileContents.split("[ \\s=+,.?\";!\\-\\n]");
+		
 	}
 
 
